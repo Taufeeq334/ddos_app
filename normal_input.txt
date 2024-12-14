@@ -1,1 +1,0 @@
-dt:11425,switch:1,pktcount:45304,bytecount:48294064,dur:100,dur_nsec:716000000,tot_dur:1.01E+11,flows:3,packetins:1943,pktperflow:13535,byteperflow:14428310,pktrate:451,Pairflow:0,port_no:3,tx_bytes:143928631,rx_bytes:3917,tx_kbps:0,rx_kbps:0,tot_kbps:0,protocol_tcp:0,protocol_udp:1
