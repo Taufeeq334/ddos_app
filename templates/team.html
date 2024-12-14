@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #ff6a00, #e94057, #1a73e8);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #1a73e8;
+        }
+        /* Main Content Styles */
+        main {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.2s ease;
+        }
+        main p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1.4s ease;
+        }
+        .team-section {
+            margin-top: -30px; /* Reduced margin */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-section h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .team-section ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .team-section li {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-align: center;
+            max-width: 300px;
+        }
+        .team-section li img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .team-section li div {
+            text-align: center;
+            margin-top: 10px;
+        }   
+        .team-section li:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 106, 0, 0.8);
+        }
+        .team-section img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #1a73e8;
+        }
+        .team-section li span {
+            font-weight: bold;
+            color: #1a73e8;
+        }
+
+        .team-section li span {
+            display: block;
+            font-weight: bold;
+            color: #1a73e8;
+        }
+
+        .my-heading {
+            text-align: center;
+            margin-bottom: -20px; /* Reduced margin */
+            font-size: 2.0rem; /* Enlarged font size */
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main h2 {
+                font-size: 2.5rem;
+            }
+            main p {
+                font-size: 1.2rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            .team-section ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDoS Detection Using Deep Learning</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/team">Team</a>
+            <a href="/predict">Predict</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <h2 class="my-heading">Meet The Team</h2>
+    <main>
+        <section class="team-section">
+            <ul>
+                <li>
+                    <img src="static/images/taufeeq.jpg" alt="Mohammad Taufeeq">
+                    <div>
+                        <span>Mohammad Taufeeq</span><br>
+                        Team Lead
+                    </div>
+                </li>
+                <li>
+                    <img src="static/images/sushma.jpg" alt="Guntur Srivalli">
+                    <div>
+                        <span>Raavi Sushma Sri</span><br>
+                        Team Member
+                    </div>
+                </li>
+                <li>
+                    <img src="static/images/charan.jpg" alt="Giri Charan">
+                    <div>
+                        <span>Talluri Giri Charan</span><br>
+                        Team Member
+                    </div>
+                </li>
+                <li>
+                    <img src="static/images/srivalli.jpg" alt="Sushma Sri">
+                    <div>
+                        <span>Guntur Srivalli</span><br>
+                        Team Member
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <p>Our team of four successfully completed a project on DDoS detection, leveraging our skills to overcome challenges and implement effective solutions. This experience enhanced both our technical expertise and teamwork.</p>
+    </main>
+</body>
+</html>

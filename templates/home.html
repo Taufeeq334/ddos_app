@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Detection System</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a73e8, #e94057, #ff6a00);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6a00;
+        }
+        /* Hero Section */
+        main {
+            text-align: center;
+            padding: 160px 20px;
+        }
+        main h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.2s ease;
+        }
+        main p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1.4s ease;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: #ff6a00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background: #e94057;
+            transform: scale(1.1);
+        }
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+        .contact h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 1.2rem;
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main h2 {
+                font-size: 2.5rem;
+            }
+            main p {
+                font-size: 1.2rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDoS Detection Using Deep Learning</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/team">Team</a>
+            <a href="/predict">Predict</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to the DDoS Detection System</h2>
+        <p>Leverage the power of deep learning to detect and mitigate potential DDoS attacks in real-time. Stay secure, stay ahead.</p>
+        <form action="predict" method="get">
+            <button class="btn" type="submit">Get Started</button>
+        </form>
+    </main>
+    <section class="contact">
+        <p>CSE (IoT, Cybersecurity including Blockchain Technology)</p>
+    </section>
+</body>
+</html>

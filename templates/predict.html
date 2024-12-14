@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a73e8, #e94057, #ff6a00);
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6a00;
+        }
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.2s ease;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.4s ease;
+        }
+        form label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #1a73e8;
+        }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        form button:hover {
+            background: #ff6a00;
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main h2 {
+                font-size: 2.5rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            form label {
+                font-size: 1rem;
+            }
+            form input, form button {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer Styles */
+        .contact {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            margin-top: auto;  /* Ensures footer stays at the bottom */
+        }
+        .contact p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDoS Detection Using Deep Learning</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/team">Team</a>
+            <a href="/predict">Predict</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Upload Network Data</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="dataFile">Upload a text file:</label>
+            <input type="file" id="dataFile" name="dataFile" accept=".txt" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <section class="contact">
+        <p>CSE (IoT, Cybersecurity including Blockchain Technology)</p>
+    </section>
+</body>
+</html>
