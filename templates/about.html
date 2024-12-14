@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DDoS Detection System</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a73e8, #e94057, #ff6a00);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6a00;
+        }
+        /* About Section */
+        .about-section {
+            text-align: center;
+            padding: 55px 20px; /* Reduced top and bottom padding */
+        }
+        .about-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.2s ease;
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #ff6a00;
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+        .box h3 {
+            font-size: 1.8rem;
+            color: #ff6a00;
+            margin-bottom: 15px;
+        }
+        .box p {
+            font-size: 1.2rem;
+            color: #fff;
+            line-height: 1.6;
+        }
+        /* Footer Section */
+        .contact {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+        .contact p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .about-section h2 {
+                font-size: 2.5rem;
+            }
+            nav a {
+                font-size: 1rem;
+            }
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDoS Detection Using Deep Learning</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/team">Team</a>
+            <a href="/predict">Predict</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <section class="about-section">
+        <h2>How It Works</h2>
+        <div class="box-container">
+            <div class="box">
+                <h3>Data Collection</h3>
+                <p>Our system collects network traffic data in real-time to analyze patterns and detect anomalies indicative of DDoS attacks.</p>
+            </div>
+            <div class="box">
+                <h3>Feature Extraction</h3>
+                <p>Critical features are extracted from the data to highlight characteristics associated with malicious activities.</p>
+            </div>
+            <div class="box">
+                <h3>Deep Learning Analysis</h3>
+                <p>A cutting-edge neural network model evaluates the features to classify traffic as normal or a potential DDoS attack.</p>
+            </div>
+            <div class="box">
+                <h3>Actionable Insights</h3>
+                <p>The system provides actionable insights and triggers alerts for timely mitigation of detected threats.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <p>CSE (IoT, Cybersecurity including Blockchain Technology)</p>
+    </section>
+</body>
+</html>
