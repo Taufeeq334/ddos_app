@@ -3,7 +3,7 @@ import torch
 import joblib
 import numpy as np
 import os
-
+import random
 
 class DDoSModel(torch.nn.Module):
     def __init__(self):
@@ -46,6 +46,19 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
+# List of possible DDoS attack reasons
+ddos_reasons = [
+    "Unusual spike in packet count.",
+    "High byte count detected in short duration.",
+    "Abnormal packet rate exceeding normal thresholds.",
+    "Multiple packet floods from a single source.",
+    "Unusual number of flow requests.",
+    "Rapid increase in packet-per-flow ratio.",
+    "Suspiciously high transmission rates detected.",
+    "Frequent anomalies in destination requests.",
+    "Sudden burst of network activity."
+]
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -87,12 +100,16 @@ def predict():
 
                     results = []
                     for prediction in predictions:
-                        result = "DDoS attack detected." if prediction == 1 else "No DDoS attack detected."
+                        if prediction == 1:
+                            reason = random.choice(ddos_reasons)
+                            result = {"message": "DDoS attack detected.", "reason": reason}
+                        else:
+                            result = {"message": "No DDoS attack detected.", "reason": None}
                         results.append(result)
 
                     return render_template('result.html', results=results)
                 except Exception as e:
-                    return render_template('result.html', result=f"Error processing the file: {str(e)}")
+                    return render_template('result.html', results=[{"message": f"Error processing the file: {str(e)}", "reason": None}])
             else:
                 return "Invalid file format. Please upload a .txt file."
         else:
@@ -119,14 +136,16 @@ def api_predict():
         with torch.no_grad():
             prediction = model(input_tensor).round().item()
 
-        result = "DDoS attack detected" if prediction == 1 else "No DDoS attack detected"
+        if prediction == 1:
+            reason = random.choice(ddos_reasons)
+            result = {"prediction": "DDoS attack detected", "reason": reason}
+        else:
+            result = {"prediction": "No DDoS attack detected", "reason": None}
 
-        return jsonify({"prediction": result})
+        return jsonify(result)
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
 
 
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
-
+    app.run(debug=True)
